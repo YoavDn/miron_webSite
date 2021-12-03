@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+a {
+  color: white;
+  font-weight: lighter;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Assistant', sans-serif;
+  font-weight: 400;
+  color: #444;
+  line-height: 1.5;
+  background-color: #f3f3f3;
+}
+a {
+  list-style: none;
+}
+li {
+  list-style: none;
+}
+
+.nav {
+  position: relative;
+
+  width: 100vw;
+  margin: auto;
+  padding-top: 3rem;
+
+  height: 8rem;
+
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
+.nav-link {
+  font-size: 3rem;
+
+  font-weight: 400;
+  cursor: pointer;
+}
+.slider {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+}
+
+.slide {
+  position: absolute;
+  width: 100vw;
+  height: 90vh;
+  transition: transform 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.slide-1 {
+  background: url(./img/Josef-6.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slide-2 {
+  background: url(./img/Josef-75.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slide-3 {
+  background: url(./img/Josef-83.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slide-title {
+  font-size: 9rem;
+}
+.slide-text {
+  font-size: 3rem;
+}
+.text {
+  width: 50vw;
+  position: relative;
+  text-shadow: 3px 3px 3px black;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  align-self: flex-start;
+  margin: 2rem 20rem;
+
+  padding: 1rem 3rem;
+  border-radius: 3rem;
+
+  color: white;
+}
+
+.contact {
+  position: relative;
+  top: -20%;
+  backdrop-filter: blur(5px) contrast(0.8);
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 3rem;
+  box-shadow: 0px 0px 7px black;
+  text-align: center;
+  text-shadow: 0px 3px 7px black;
+  margin: auto;
+
+  padding: 1.6rem 4rem;
+
+  color: rgb(232, 219, 219);
+}
+
+.slider__btn {
+  position: absolute;
+  backdrop-filter: blur(3px);
+  top: 70%;
+  z-index: 10;
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  color: #333;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+}
+.slider__btn--left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+  right: 6%;
+  transform: translate(50%, -50%);
+}
+
+.footer {
+  position: relative;
+  background-color: whitesmoke;
+
+  padding: 3rem 0rem;
+
+  z-index: 1000;
+}
+.miron {
+  opacity: 0%;
+}
+
+.footer__nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+}
+.footer-link {
+  margin-left: 4rem;
+  
+  cursor: pointer;
+
+}
+
+@media only screen and (max-width: 600px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+
+  html {
+    font-size: 35%;
+    box-sizing: border-box;
+    background: black;
+  }
+  body {
+    background: black;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .slide-title {
+    font-size: 6rem;
+  }
+  .slide-text {
+    font-size: 3rem;
+  }
+
+  .slider {
+    position: relative;
+
+    background: rgb(0, 0, 0);
+  }
+
+  .slide {
+    position: relative;
+    height: 100vh;
+
+    transition: transform 0.5s;
+  }
+  .slide-1 {
+    background: url(./img/Josef-6.jpg);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px 50%;
+  }
+
+  .slide-2 {
+    background: url(./img/Josef-75.jpg);
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0px 30%;
+  }
+
+  .slide-3 {
+    background: url(./img/Josef-83.jpg);
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0px 40%;
+    transform: translateY(-60%);
+  }
+  .nav {
+    display: none;
+    font-size: 3rem;
+
+    font-weight: 500;
+    cursor: pointer;
+    color: rgb(160, 155, 155);
+  }
+
+  .text {
+    position: absolute;
+    height: 100vh;
+    width: 80vw;
+    text-shadow: 3px 3px 3px black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-self: flex-start;
+
+    border-radius: 3rem;
+    margin: auto 5rem;
+
+    color: white;
+  }
+
+  .slider__btn--left {
+    display: none;
+    left: 6%;
+    transform: translate(-50%, -50%);
+  }
+
+  .slider__btn--right {
+    display: none;
+    right: 6%;
+    transform: translate(50%, -50%);
+  }
+  .footer {
+    position: relative;
+    transform: translateY(930%);
+  }
+  .contact {
+    transform: translateY(-50%);
+  }
+  .miron {
+    opacity: 100%;
+    font-family: 'Corinthia', cursive;
+    position: relative;
+    font-size: 10rem;
+
+    color: white;
+    transform: translateY(890%);
+    text-align: center;
+    margin: auto;
+  }
+}
